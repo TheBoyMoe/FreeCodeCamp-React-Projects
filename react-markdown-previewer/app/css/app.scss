@@ -1,0 +1,11 @@
+/*
+  App Styles
+ */
+
+$space-large: 32px;
+$title-color: blue;
+
+.page-title {
+  margin: $space-large 0;
+  color: $title-color;
+}

@@ -11,7 +11,8 @@ module.exports = {
         alias: {
             TextArea: 'app/components/TextArea.jsx',
             PreviewArea: 'app/components/PreviewArea',
-            PreviewContainer: 'app/components/PreviewContainer'
+            PreviewContainer: 'app/components/PreviewContainer',
+            applicationStyles: 'app/css/app.scss'
         },
         extensions: ['', '.js', '.jsx']
     },

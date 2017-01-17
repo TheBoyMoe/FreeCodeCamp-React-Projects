@@ -6,7 +6,8 @@ let PreviewContainer = React.createClass({
    render: function () {
        return (
            <div>
-               <TextArea />git status
+               <h1 className="page-title">React Markdown Previewer App</h1>
+               <TextArea />
                <PreviewArea/>
            </div>
        )
