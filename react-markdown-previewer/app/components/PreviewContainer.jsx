@@ -6,7 +6,7 @@ let PreviewContainer = React.createClass({
    render: function () {
        return (
            <div>
-               <TextArea />
+               <TextArea />git status
                <PreviewArea/>
            </div>
        )
