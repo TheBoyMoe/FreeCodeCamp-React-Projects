@@ -2,7 +2,7 @@ let React = require('react');
 let PreviewArea = require('PreviewArea');
 let TextArea = require('TextArea');
 
-let PreviewContainer = React.createClass({
+let Main = React.createClass({
    render: function () {
        return (
            <div>
@@ -13,4 +13,4 @@ let PreviewContainer = React.createClass({
        )
    }
 });
-module.exports = PreviewContainer;
+module.exports = Main;

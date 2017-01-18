@@ -1,7 +1,7 @@
 {
   "name": "react-boiler-plate",
   "version": "1.0.0",
-  "description": "simple react boilerplate",
+  "description": "React Markdown Preview App",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,9 +10,11 @@
   "author": "theBoyMo",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.15.3",
     "express": "^4.14.0",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "react-router": "^3.0.2"
   },
   "devDependencies": {
     "babel-core": "^6.21.0",

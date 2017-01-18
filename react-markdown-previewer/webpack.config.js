@@ -9,9 +9,9 @@ module.exports = {
     resolve: {
         root: __dirname,
         alias: {
+            Main: 'app/components/Main',
             TextArea: 'app/components/TextArea.jsx',
             PreviewArea: 'app/components/PreviewArea',
-            PreviewContainer: 'app/components/PreviewContainer',
             applicationStyles: 'app/css/app.scss'
         },
         extensions: ['', '.js', '.jsx']
@@ -27,5 +27,6 @@ module.exports = {
                 exclude: /(node_modules|bower_components)/
             }
         ]
-    }
+    },
+    devtool: 'cheap-module-eval-source-map' // debugging
 };
