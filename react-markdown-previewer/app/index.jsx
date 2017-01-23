@@ -13,7 +13,7 @@
     [11] http://codepen.io/jchimienti/pen/YqrPMm (example - text)
     [12] http://codepen.io/ColtonBoston/pen/XKVvYq (example - code)
     [13] http://codepen.io/alamm/pen/oLOqvN (example)
-
+    [14] https://gist.github.com/hcatlin/1027867 (scss reset style sheet)
 
  */
 
