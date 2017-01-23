@@ -23,6 +23,14 @@ let ReactDOM = require('react-dom');
 // load styles
 require('style!css!sass!applicationStyles');
 
+let exampleText = "Heading\n=======\n\nSub-heading\n-----------\n\n\
+## Another deeper heading\n \nParagraphs are separated\nby a blank line.\n\n\
+Leave 2 spaces at the end of a line to do a line break\n\n\
+Text attributes *italic*, **bold**, \n`monospace`, ~~strikethrough~~ .\n\n\
+Shopping list:\n\n * apples\n * oranges\n * pears\n\nNumbered list:\n\n\
+ 1. apples\n 2. oranges\n 3. pears\n\n\
+*[Bill Fero](https://freecodecamp.com/theboymo)*";
+
 let Header = React.createClass({
     render: function () {
         return (
@@ -46,7 +54,10 @@ let Footer = React.createClass({
 let Input = React.createClass({
     render: function () {
         return (
-            <textarea>Enter your text here</textarea>
+            <div>
+                <h2>Input Area</h2>
+                <textarea rows="30" cols="60">{exampleText}</textarea>
+            </div>
         )
     }
 });
@@ -54,7 +65,9 @@ let Input = React.createClass({
 let Output = React.createClass({
     render: function () {
         return (
-            <div>Preview area</div>
+            <div>
+                <h2>Preview area</h2>
+            </div>
         )
     }
 });
@@ -62,7 +75,9 @@ let Output = React.createClass({
 let QuickRef = React.createClass({
     render: function () {
         return (
-            <div>Quick reference area</div>
+            <div>
+                <h2>Quick reference area</h2>
+            </div>
         )
     }
 });
