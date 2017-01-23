@@ -26,7 +26,7 @@ require('style!css!sass!applicationStyles');
 let Header = React.createClass({
     render: function () {
         return (
-            <H1>Markdown Preview App</H1>
+            <h1>Markdown Preview App</h1>
         )
     }
 });
