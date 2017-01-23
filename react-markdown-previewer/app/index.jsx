@@ -19,20 +19,76 @@
 
 let React = require('react');
 let ReactDOM = require('react-dom');
-let {Route, Router, IndexRoute, hashHistory} = require('react-router');
-
-// custom components
-let Main = require('Main');
 
 // load styles
 require('style!css!sass!applicationStyles');
 
-ReactDOM.render(
-    <Router history={hashHistory}>
-        <Route path="/" component={Main}>
+let Header = React.createClass({
+    render: function () {
+        return (
+            <H1>Markdown Preview App</H1>
+        )
+    }
+});
 
-        </Route>
-    </Router>,
+let Footer = React.createClass({
+    render: function () {
+        let date = new Date();
+        return (
+            <div>
+                <p>Built by Bill Fero using React, ES6m JSX and Babel. Copyright &copy; {date.getFullYear()}</p>
+            </div>
+        )
+    }
+});
+
+
+let Input = React.createClass({
+    render: function () {
+        return (
+            <textarea>Enter your text here</textarea>
+        )
+    }
+});
+
+let Output = React.createClass({
+    render: function () {
+        return (
+            <div>Preview area</div>
+        )
+    }
+});
+
+let QuickRef = React.createClass({
+    render: function () {
+        return (
+            <div>Quick reference area</div>
+        )
+    }
+});
+
+
+let App = React.createClass({
+    render: function () {
+        return (
+            <div>
+                <Header />
+                <div>
+                    <Input/>
+                    <div>
+                        <Output/>
+                        <QuickRef/>
+                    </div>
+                </div>
+                <Footer/>
+            </div>
+        )
+    }
+});
+
+
+ReactDOM.render(
+    <App/>,
     document.getElementById('app')
 );
 
