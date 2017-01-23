@@ -34,7 +34,9 @@ Shopping list:\n\n * apples\n * oranges\n * pears\n\nNumbered list:\n\n\
 let Header = React.createClass({
     render: function () {
         return (
-            <h1>Markdown Preview App</h1>
+            <header>
+                <h1>Markdown Preview App</h1>
+            </header>
         )
     }
 });
@@ -43,9 +45,9 @@ let Footer = React.createClass({
     render: function () {
         let date = new Date();
         return (
-            <div>
+            <footer>
                 <p>Built by Bill Fero using React, ES6m JSX and Babel. Copyright &copy; {date.getFullYear()}</p>
-            </div>
+            </footer>
         )
     }
 });
@@ -54,7 +56,7 @@ let Footer = React.createClass({
 let Input = React.createClass({
     render: function () {
         return (
-            <div>
+            <div id="input-area">
                 <h2>Input Area</h2>
                 <textarea rows="30" cols="60">{exampleText}</textarea>
             </div>
@@ -65,7 +67,7 @@ let Input = React.createClass({
 let Output = React.createClass({
     render: function () {
         return (
-            <div>
+            <div id="preview-area">
                 <h2>Preview area</h2>
             </div>
         )
@@ -75,7 +77,7 @@ let Output = React.createClass({
 let QuickRef = React.createClass({
     render: function () {
         return (
-            <div>
+            <div id="quick-reference-area">
                 <h2>Quick reference area</h2>
             </div>
         )
@@ -88,13 +90,13 @@ let App = React.createClass({
         return (
             <div>
                 <Header />
-                <div>
+                <main id="content">
                     <Input/>
-                    <div>
+                    <div id="output-area">
                         <Output/>
                         <QuickRef/>
                     </div>
-                </div>
+                </main>
                 <Footer/>
             </div>
         )
