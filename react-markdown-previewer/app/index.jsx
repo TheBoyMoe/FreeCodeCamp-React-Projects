@@ -16,6 +16,8 @@
     [14] https://gist.github.com/hcatlin/1027867 (scss reset style sheet)
 	[15] http://pxtoem.com/
 	[16] http://stackoverflow.com/questions/31081320/flexbox-stretch-textarea-in-column
+    [17] https://codepen.io/raphaelgoetter/pen/NqPQBa (flexbox form)
+
 
  */
 
@@ -59,10 +61,10 @@ let Input = React.createClass({
     render: function () {
         return (
             <div id="input-area">
-				<div className="wrap">
+				{/*<div className="wrap">*/}
                 	<h2>Input Area</h2>
-					<textarea cols="60" rows="30">{exampleText}</textarea>
-				</div>
+					<textarea cols="10" rows="5">{exampleText}</textarea>
+				{/*</div>*/}
             </div>
         )
     }
@@ -92,15 +94,13 @@ let QuickRef = React.createClass({
 let App = React.createClass({
     render: function () {
         return (
-            <div>
+            <div id="wrap">
                 <Header />
                 <main id="content">
                     <Input/>
                     <div id="output-area">
-						<div className="wrap">
-                        	<Output/>
-                        	<QuickRef/>
-						</div>
+                        <Output/>
+                        {/*<QuickRef/>*/}
                     </div>
                 </main>
                 <Footer/>

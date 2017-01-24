@@ -27,13 +27,13 @@ blockquote, q {
 
 blockquote {
   &:before, &:after {
-    content: '';
-    content: none; } }
+	content: '';
+	content: none; } }
 
 q {
   &:before, &:after {
-    content: '';
-    content: none; } }
+	content: '';
+	content: none; } }
 
 table {
   border-collapse: collapse;
@@ -103,74 +103,68 @@ $space-large: 1.5em;
 $space-normal: 1.0em;
 $space-small: 0.5em;
 
+html, body, #app, #wrap {
+  	height: 100%;
+}
 
 body {
-  min-height: 100%;
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
+}
 
-  header,
-  footer {
-    width: 100%;
-    padding: $space-large 0;
-    text-align: center;
-    color: $primary-text-color;
-    background-color: $tertiary-bkgd-color;
-  }
+#wrap {
+  display: flex;
+  flex-direction: column;
+}
 
-  #content {
-    display: flex;
-    //overflow: hidden;
-    //flex: 1;
+header,
+footer {
+	width: 100%;
+	padding: $space-large 0;
+	text-align: center;
+	color: $primary-text-color;
+	background-color: $tertiary-bkgd-color;
+}
 
+#content {
+  	display: flex;
+  	flex: 1;
+  	overflow: hidden;
+}
 
-    #input-area,
-    #output-area {
-      //width: 50%;
-      //display: flex;
-      flex: 1;
+#input-area,
+#output-area {
 
-      .wrap {
-        padding: $space-normal;
-        //width: 100%;
-      }
-    }
+	padding: $space-normal;
+	min-width: 0;
+}
 
-    #input-area {
-      //float: left;
-      background-color: $secondary-bkgd-color;
-      color: $primary-text-color;
+#input-area {
+	background-color: $secondary-bkgd-color;
+	color: $primary-text-color;
+	display: flex;
+	flex-direction: column;
+	flex: 1;
 
+	textarea {
+		flex: 1;
+		display: block;
+		resize: vertical;
+		color: $primary-text-color;
+		background-color: transparent;
+		border: none;
+		padding: 0;
+		outline: none;
 
-        textarea {
-          color: $primary-text-color;
-          background-color: transparent;
-          border: none;
-          padding: 0;
-          outline: none;
-          resize: none;
-          overflow: auto;
-          -webkit-box-sizing: border-box;
-          -moz-box-sizing: border-box;
-          box-sizing: border-box;
-          width: 100%;
-          height: 100%;
-        }
-
-    }
-
-    #output-area {
-      //float: right;
-      background-color: $primary-bkgd-color;
-      color: $secondary-text-color;
-
-    }
-
-  }
-
+	}
 
 }
 
+#output-area {
+	flex: 1;
+	background-color: $primary-bkgd-color;
+	color: $secondary-text-color;
+}
 
 
 
