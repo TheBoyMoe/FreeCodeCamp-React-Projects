@@ -94,7 +94,7 @@ let App = React.createClass({
         return (
             <div>
                 <Header />
-                <main id="content" className="clearfix">
+                <main id="content">
                     <Input/>
                     <div id="output-area">
 						<div className="wrap">
