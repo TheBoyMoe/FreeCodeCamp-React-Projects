@@ -4,4 +4,6 @@ npm-debug.log
 react-markdown-previewer/node_modules
 react-markdown-previewer/.idea/
 react-markdown-previewer/public/bundle.js
+react-markdown-previewer/examples/
+
 
