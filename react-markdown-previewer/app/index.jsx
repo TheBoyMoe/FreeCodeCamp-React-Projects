@@ -17,6 +17,7 @@
 	[15] http://pxtoem.com/
 	[16] http://stackoverflow.com/questions/31081320/flexbox-stretch-textarea-in-column
     [17] https://codepen.io/raphaelgoetter/pen/NqPQBa (flexbox form)
+    [18] http://stackoverflow.com/questions/4804581/css-expand-float-child-div-height-to-parents-height
 
 
  */
@@ -63,7 +64,7 @@ let Input = React.createClass({
             <div id="input-area">
 				{/*<div className="wrap">*/}
                 	<h2>Input Area</h2>
-					<textarea cols="10" rows="5">{exampleText}</textarea>
+					<textarea cols="10" rows="50">{exampleText}</textarea>
 				{/*</div>*/}
             </div>
         )
@@ -94,16 +95,18 @@ let QuickRef = React.createClass({
 let App = React.createClass({
     render: function () {
         return (
-            <div id="wrap">
+            <div id="container">
                 <Header />
                 <main id="content">
                     <Input/>
                     <div id="output-area">
-                        <Output/>
-                        {/*<QuickRef/>*/}
+                        {/*<div className="wrap">*/}
+                            <Output/>
+                            {/*<QuickRef/>*/}
+                        {/*</div>*/}
                     </div>
                 </main>
-                <Footer/>
+                {/*<Footer/>*/}
             </div>
         )
     }

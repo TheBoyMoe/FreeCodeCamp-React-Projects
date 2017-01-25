@@ -98,13 +98,21 @@ $secondary-bkgd-color: #888888;
 $tertiary-bkgd-color: #666666;
 
 // spaces
-$space-xlarge: 2.0em;
-$space-large: 1.5em;
-$space-normal: 1.0em;
-$space-small: 0.5em;
+$space-xxlarge: 3.750em;	// 60px
+$space-xlarge: 2.0em;		// 32px
+$space-large: 1.5em;		// 24px
+$space-medium: 1.250em; 	// 20px
+$space-normal: 1.0em; 		// 16px
+$space-small: 0.5em;		// 8px
 
-html, body, #app, #wrap {
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #app, #container {
   	height: 100%;
+  	overflow: hidden; // ?? remove
 }
 
 body {
@@ -112,64 +120,59 @@ body {
 	padding: 0;
 }
 
-#wrap {
-  display: flex;
-  flex-direction: column;
-}
-
-header,
-footer {
+header {
 	width: 100%;
-	padding: $space-large 0;
 	text-align: center;
 	color: $primary-text-color;
 	background-color: $tertiary-bkgd-color;
+
+  	h1 {
+	  	font-size: $space-medium;
+	  	padding: $space-medium 0;
+	}
 }
 
 #content {
-  	display: flex;
-  	flex: 1;
-  	overflow: hidden;
+  	height: calc(100% - 3.750em);
+	width: 100%;
+  	display: table;
+	background-color: $secondary-bkgd-color;
+}
+
+#content > div {
+  	padding: $space-normal;
 }
 
 #input-area,
 #output-area {
+	display: table-cell;
+	width: 50%;
+	height: 100%;
 
-	padding: $space-normal;
-	min-width: 0;
+  	.wrap {
+
+	}
 }
 
 #input-area {
-	background-color: $secondary-bkgd-color;
 	color: $primary-text-color;
-	display: flex;
-	flex-direction: column;
-	flex: 1;
 
 	textarea {
-		flex: 1;
 		display: block;
-		resize: vertical;
 		color: $primary-text-color;
 		background-color: transparent;
+	  	box-sizing: border-box;
+	  	width: 100%;
 		border: none;
 		padding: 0;
 		outline: none;
-
 	}
 
 }
 
 #output-area {
-	flex: 1;
-	background-color: $primary-bkgd-color;
+  	background-color: $primary-bkgd-color;
+  	height: 100%;
 	color: $secondary-text-color;
 }
-
-
-
-
-
-
-
 
