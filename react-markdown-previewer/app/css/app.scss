@@ -94,16 +94,17 @@ table {
 $primary-text-color: #ffffff;
 $secondary-text-color: #666666;
 $primary-bkgd-color: #ffffff;
-$secondary-bkgd-color: #888888;
+$secondary-bkgd-color: #2C3044;
 $tertiary-bkgd-color: #666666;
 
 // spaces
-$space-xxlarge: 3.750em;	// 60px
-$space-xlarge: 2.0em;		// 32px
-$space-large: 1.5em;		// 24px
-$space-medium: 1.250em; 	// 20px
-$space-normal: 1.0em; 		// 16px
-$space-small: 0.5em;		// 8px
+$size-xxxlarge: 3.750em;	// 60px
+$size-xxlarge: 3.0em;
+$size-xlarge: 2.0em;		// 32px
+$size-large: 1.5em;		// 24px
+$size-medium: 1.250em; 	// 20px
+$size-normal: 1.0em; 		// 16px
+$size-small: 0.5em;		// 8px
 
 
 * {
@@ -118,6 +119,7 @@ html, body, #app, #container {
 body {
 	margin: 0;
 	padding: 0;
+  	font-family: 'PT Mono', monospace;
 }
 
 header {
@@ -125,22 +127,17 @@ header {
 	text-align: center;
 	color: $primary-text-color;
 	background-color: $tertiary-bkgd-color;
-
-  	h1 {
-	  	font-size: $space-medium;
-	  	padding: $space-medium 0;
-	}
 }
 
 #content {
-  	height: calc(100% - 3.750em);
+  	height: 100%;
 	width: 100%;
   	display: table;
 	background-color: $secondary-bkgd-color;
 }
 
 #content > div {
-  	padding: $space-normal;
+  	padding: $size-large;
 }
 
 #input-area,
@@ -149,8 +146,9 @@ header {
 	width: 50%;
 	height: 100%;
 
-  	.wrap {
-
+  	h2 {
+	  	margin-bottom: $size-normal;
+	  font-size: $size-large;
 	}
 }
 
@@ -158,6 +156,8 @@ header {
 	color: $primary-text-color;
 
 	textarea {
+	  	font-family: 'Ubuntu Mono', monospace;
+	  	font-size: 1.125em;
 		display: block;
 		color: $primary-text-color;
 		background-color: transparent;

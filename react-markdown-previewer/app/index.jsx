@@ -63,7 +63,7 @@ let Input = React.createClass({
         return (
             <div id="input-area">
 				{/*<div className="wrap">*/}
-                	<h2>Input Area</h2>
+                	<h2>Markdown Input Area</h2>
 					<textarea cols="10" rows="50">{exampleText}</textarea>
 				{/*</div>*/}
             </div>
@@ -96,7 +96,7 @@ let App = React.createClass({
     render: function () {
         return (
             <div id="container">
-                <Header />
+                {/*<Header />*/}
                 <main id="content">
                     <Input/>
                     <div id="output-area">
