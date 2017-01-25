@@ -63,7 +63,7 @@ let Input = React.createClass({
         return (
             <div id="input-area">
                 <h2>Markdown Input Area</h2>
-                <textarea cols="10" rows="50">{exampleText}</textarea>
+                <textarea cols="10" rows="50" placeholder={exampleText} />
             </div>
         )
     }
@@ -99,7 +99,7 @@ let App = React.createClass({
                     <Input/>
                     <div id="output-area">
                         <Output/>
-                        {/*<QuickRef/>*/}
+                        <QuickRef/>
                     </div>
                 </main>
                 {/*<Footer/>*/}
