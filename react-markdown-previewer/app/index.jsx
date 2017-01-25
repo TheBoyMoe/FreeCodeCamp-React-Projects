@@ -62,10 +62,8 @@ let Input = React.createClass({
     render: function () {
         return (
             <div id="input-area">
-				{/*<div className="wrap">*/}
-                	<h2>Markdown Input Area</h2>
-					<textarea cols="10" rows="50">{exampleText}</textarea>
-				{/*</div>*/}
+                <h2>Markdown Input Area</h2>
+                <textarea cols="10" rows="50">{exampleText}</textarea>
             </div>
         )
     }
@@ -100,10 +98,8 @@ let App = React.createClass({
                 <main id="content">
                     <Input/>
                     <div id="output-area">
-                        {/*<div className="wrap">*/}
-                            <Output/>
-                            {/*<QuickRef/>*/}
-                        {/*</div>*/}
+                        <Output/>
+                        {/*<QuickRef/>*/}
                     </div>
                 </main>
                 {/*<Footer/>*/}
