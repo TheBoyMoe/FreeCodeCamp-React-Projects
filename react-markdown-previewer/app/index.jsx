@@ -113,10 +113,27 @@ let Output = React.createClass({
 
 
 let MarkdownPreview = React.createClass({
+	// getDefaultProps: function () {
+	// 	return {
+	// 		markdown: text
+	// 	}
+	// },
+	getInitialState: function () {
+		return {
+			//markdown: this.props.markdown
+			markdown: ''
+		}
+	},
+	handleTextInput: function (text) {
+		// text received from input, update state & forwarded to output
+		this.setState({
+			markdown: text
+		})
+	},
 	render: function () {
 		return (
 			<main id="content">
-				<Input/>
+				<Input onTextInput={this.handleTextInput} />
 				<Output/>
 			</main>
 		)
