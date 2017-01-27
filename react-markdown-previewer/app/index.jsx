@@ -86,11 +86,15 @@ let Input = React.createClass({
 			markdown: text
 		}
 	},
+	onTextInput: function () {
+		let markdown = this.refs.markdownText.value;
+		console.log(markdown);
+	},
     render: function () {
         return (
             <div id="input-area">
                 <h2>Markdown Input Area</h2>
-                <textarea cols="10" rows="40" placeholder={this.props.markdown} />
+                <textarea onKeyUp={this.onTextInput} ref="markdownText" cols="10" rows="40" placeholder={this.props.markdown} />
             </div>
         )
     }
