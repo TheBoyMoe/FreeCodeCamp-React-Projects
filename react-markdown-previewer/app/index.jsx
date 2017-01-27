@@ -107,7 +107,7 @@ let Output = React.createClass({
         return (
             <div id="preview-area">
                 <h2>Preview area</h2>
-                <p>{text}</p>
+                <p>{this.props.markdown}</p>
             </div>
         )
     }
@@ -115,15 +115,14 @@ let Output = React.createClass({
 
 
 let MarkdownPreview = React.createClass({
-	// getDefaultProps: function () {
-	// 	return {
-	// 		markdown: text
-	// 	}
-	// },
+	getDefaultProps: function () {
+		return {
+			markdown: 'Enter your text in the area to the left!'
+		}
+	},
 	getInitialState: function () {
 		return {
-			//markdown: this.props.markdown
-			markdown: ''
+			markdown: this.props.markdown
 		}
 	},
 	handleTextInput: function (text) {
@@ -131,13 +130,12 @@ let MarkdownPreview = React.createClass({
 		this.setState({
 			markdown: text
 		});
-		console.log(this.state.markdown);
 	},
 	render: function () {
 		return (
 			<main id="content">
 				<Input onTextUpdate={this.handleTextInput} />
-				<Output/>
+				<Output markdown={this.state.markdown} />
 			</main>
 		)
 	}
