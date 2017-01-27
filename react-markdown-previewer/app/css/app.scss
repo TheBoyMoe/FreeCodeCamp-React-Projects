@@ -7,8 +7,8 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
-  font: inherit;
+  //font-size: 100%;
+  //font: inherit;
   vertical-align: baseline; }
 
 /* HTML5 display-role reset for older browsers */
@@ -22,18 +22,6 @@ body {
 ol, ul {
   list-style: none; }
 
-blockquote, q {
-  quotes: none; }
-
-blockquote {
-  &:before, &:after {
-	content: '';
-	content: none; } }
-
-q {
-  &:before, &:after {
-	content: '';
-	content: none; } }
 
 table {
   border-collapse: collapse;
@@ -42,50 +30,50 @@ table {
 
 /* Helper classes */
 
-.pull-left {
-  float: left !important;
-}
-
-.pull-right {
-  float: right !important;
-}
-
-.show {
-  display: block !important;
-}
-
-.hidden {
-  display: none !important;
-}
-
-.invisible {
-  visibility: hidden;
-}
-
-.clearfix:before,
-.clearfix:after {
-  content: "";
-  display: table;
-}
-
-.clearfix:after {
-  clear: both;
-}
-
-.clearfix {
-  zoom: 1; /* ie 6/7 */
-}
-
-.center-parent {
-  position: relative;
-}
-
-.center-child {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
+//.pull-left {
+//  float: left !important;
+//}
+//
+//.pull-right {
+//  float: right !important;
+//}
+//
+//.show {
+//  display: block !important;
+//}
+//
+//.hidden {
+//  display: none !important;
+//}
+//
+//.invisible {
+//  visibility: hidden;
+//}
+//
+//.clearfix:before,
+//.clearfix:after {
+//  content: "";
+//  display: table;
+//}
+//
+//.clearfix:after {
+//  clear: both;
+//}
+//
+//.clearfix {
+//  zoom: 1; /* ie 6/7 */
+//}
+//
+//.center-parent {
+//  position: relative;
+//}
+//
+//.center-child {
+//  position: absolute;
+//  top: 50%;
+//  transform: translateY(-50%);
+//}
+//
 
 
 /* App Styles */
@@ -148,9 +136,12 @@ header {
 	width: 50%;
 	height: 100%;
 
-  	h2 {
-	  	margin-bottom: $size-normal;
+  	.title {
 	  	font-size: $size-large;
+	}
+
+  	* {
+    	margin-bottom: $size-normal;
 	}
 }
 
@@ -176,9 +167,5 @@ header {
   	background-color: $primary-bkgd-color;
   	height: 100%;
 	color: $secondary-text-color;
-
-  	p {
-	  	margin-bottom: $size-normal;
-	}
 }
 
