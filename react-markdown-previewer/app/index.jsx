@@ -39,13 +39,14 @@ let ReactDOM = require('react-dom');
 // load styles
 require('style!css!sass!applicationStyles');
 
-let exampleText = "Heading\n=======\n\nSub-heading\n-----------\n\n\
+let text = "Heading\n=======\n\nSub-heading\n-----------\n\n\
 ## Another deeper heading\n \nParagraphs are separated\nby a blank line.\n\n\
 Leave 2 spaces at the end of a line to do a line break\n\n\
 Text attributes *italic*, **bold**, \n`monospace`, ~~strikethrough~~ .\n\n\
 Shopping list:\n\n * apples\n * oranges\n * pears\n\nNumbered list:\n\n\
  1. apples\n 2. oranges\n 3. pears\n\n\
 *[Bill Fero](https://freecodecamp.com/theboymo)*";
+
 
 let Header = React.createClass({
     render: function () {
@@ -68,13 +69,28 @@ let Footer = React.createClass({
     }
 });
 
+let QuickRef = React.createClass({
+	render: function () {
+		return (
+			<div id="quick-reference-area">
+				<h2>Quick reference area</h2>
+			</div>
+		)
+	}
+});
+
 
 let Input = React.createClass({
+	getDefaultProps: function () {
+		return {
+			markdown: text
+		}
+	},
     render: function () {
         return (
             <div id="input-area">
                 <h2>Markdown Input Area</h2>
-                <textarea cols="10" rows="40" placeholder={exampleText} />
+                <textarea cols="10" rows="40" placeholder={this.props.markdown} />
             </div>
         )
     }
@@ -85,19 +101,7 @@ let Output = React.createClass({
         return (
             <div id="preview-area">
                 <h2>Preview area</h2>
-                <p>{exampleText}</p>
-                <p>{exampleText}</p>
-                <p>{exampleText}</p>
-            </div>
-        )
-    }
-});
-
-let QuickRef = React.createClass({
-    render: function () {
-        return (
-            <div id="quick-reference-area">
-                <h2>Quick reference area</h2>
+                <p>{text}</p>
             </div>
         )
     }
