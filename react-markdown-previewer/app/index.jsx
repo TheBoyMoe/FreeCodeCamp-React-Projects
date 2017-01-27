@@ -112,15 +112,10 @@ let App = React.createClass({
     render: function () {
         return (
             <div id="container">
-                {/*<Header />*/}
                 <main id="content">
                     <Input/>
-                    <div id="output-area">
-                        <Output/>
-                        {/*<QuickRef/>*/}
-                    </div>
+                    <Output/>
                 </main>
-                {/*<Footer/>*/}
             </div>
         )
     }

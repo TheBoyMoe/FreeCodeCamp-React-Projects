@@ -143,22 +143,22 @@ header {
 }
 
 #input-area,
-#output-area {
+#preview-area {
 	display: table-cell;
 	width: 50%;
 	height: 100%;
 
   	h2 {
 	  	margin-bottom: $size-normal;
-	  font-size: $size-large;
+	  	font-size: $size-large;
 	}
 }
 
 #input-area {
 	color: $primary-text-color;
+	font-family: 'Ubuntu Mono', monospace;
 
 	textarea {
-	  	font-family: 'Ubuntu Mono', monospace;
 	  	font-size: 1.125em;
 		display: block;
 		color: $primary-text-color;
@@ -172,7 +172,7 @@ header {
 
 }
 
-#output-area {
+#preview-area {
   	background-color: $primary-bkgd-color;
   	height: 100%;
 	color: $secondary-text-color;
