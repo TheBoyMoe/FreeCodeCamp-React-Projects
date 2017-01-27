@@ -88,7 +88,9 @@ let Input = React.createClass({
 	},
 	onTextInput: function () {
 		let markdown = this.refs.markdownText.value;
-		console.log(markdown);
+		if(typeof markdown == 'string' && markdown.length > 0) {
+			this.props.onTextUpdate(markdown);
+		}
 	},
     render: function () {
         return (
@@ -128,12 +130,13 @@ let MarkdownPreview = React.createClass({
 		// text received from input, update state & forwarded to output
 		this.setState({
 			markdown: text
-		})
+		});
+		console.log(this.state.markdown);
 	},
 	render: function () {
 		return (
 			<main id="content">
-				<Input onTextInput={this.handleTextInput} />
+				<Input onTextUpdate={this.handleTextInput} />
 				<Output/>
 			</main>
 		)
