@@ -112,14 +112,23 @@ let Output = React.createClass({
 });
 
 
+let MarkdownPreview = React.createClass({
+	render: function () {
+		return (
+			<main id="content">
+				<Input/>
+				<Output/>
+			</main>
+		)
+	}
+});
+
+
 let App = React.createClass({
     render: function () {
         return (
             <div id="container">
-                <main id="content">
-                    <Input/>
-                    <Output/>
-                </main>
+                <MarkdownPreview/>
             </div>
         )
     }
