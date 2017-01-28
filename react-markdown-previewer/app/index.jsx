@@ -45,39 +45,6 @@ let ReactDOM = require('react-dom');
 // load styles
 require('style!css!sass!applicationStyles');
 
-
-let Header = React.createClass({
-    render: function () {
-        return (
-            <header>
-                <h1>Markdown Preview App</h1>
-            </header>
-        )
-    }
-});
-
-let Footer = React.createClass({
-    render: function () {
-        let date = new Date();
-        return (
-            <footer>
-                <p>Built by Bill Fero using React, ES6m JSX and Babel. Copyright &copy; {date.getFullYear()}</p>
-            </footer>
-        )
-    }
-});
-
-let QuickRef = React.createClass({
-	render: function () {
-		return (
-			<div id="quick-reference-area">
-				<h2>Quick reference area</h2>
-			</div>
-		)
-	}
-});
-
-
 let Input = React.createClass({
 	
 	getDefaultProps: function () {
@@ -175,7 +142,3 @@ ReactDOM.render(
     <App/>,
     document.getElementById('app')
 );
-
-// NOTE: to run the app, run
-// webpack -w & node server.js
-// at the cli  in separate tabs
