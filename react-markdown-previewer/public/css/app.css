@@ -1,0 +1,61 @@
+/* App Styles */
+* {
+  box-sizing: border-box; }
+
+html, body, #app, #container {
+  height: 100%;
+  overflow: hidden; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'PT Mono', monospace;
+  min-width: 600px;
+  max-width: 1200px; }
+
+header {
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  background-color: #3c0c1a; }
+
+#content {
+  height: 100%;
+  width: 100%;
+  display: table;
+  background-color: #055b6d; }
+
+#content > div {
+  padding: 1.5em; }
+
+#input-area,
+#preview-area {
+  display: table-cell;
+  width: 50%;
+  height: 100%; }
+  #input-area .title,
+  #preview-area .title {
+    font-size: 1.5em; }
+  #input-area *,
+  #preview-area * {
+    margin-bottom: 1em; }
+
+#input-area {
+  color: #ffffff;
+  font-family: 'Ubuntu Mono', monospace; }
+  #input-area textarea {
+    font-size: 1.125em;
+    display: block;
+    color: #ffffff;
+    background-color: transparent;
+    box-sizing: border-box;
+    width: 100%;
+    border: none;
+    padding: 0;
+    outline: none; }
+
+#preview-area {
+  background-color: #ffffff;
+  color: #666666; }
+
+/*# sourceMappingURL=app.css.map */

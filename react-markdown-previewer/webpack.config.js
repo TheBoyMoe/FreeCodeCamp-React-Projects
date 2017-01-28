@@ -1,5 +1,4 @@
 
-
 module.exports = {
     entry: './app/index.jsx',
     output: {
@@ -9,9 +8,6 @@ module.exports = {
     resolve: {
         root: __dirname,
         alias: {
-            Main: 'app/components/Main',
-            TextArea: 'app/components/TextArea.jsx',
-            PreviewArea: 'app/components/PreviewArea',
             applicationStyles: 'app/css/app.scss'
         },
         extensions: ['', '.js', '.jsx']
