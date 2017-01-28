@@ -10,6 +10,9 @@ The following technologies were used:
 - Webpack 
 - HTML/CSS/SCSS
 
+Working versions of the following projects can be seen at Codepen.io:
+[Markdown Previewer](http://codepen.io/billfero/full/rjYdQJ/)
+
 
 ###MIT License
 
