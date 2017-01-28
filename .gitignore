@@ -5,5 +5,9 @@ react-markdown-previewer/.idea/
 react-markdown-previewer/public/bundle.js
 react-markdown-previewer/examples
 react-markdown-previewer/public/css/.sass-cache
-npm-debug.log
+
+camper-leader-board/app/css/.sass-cache
+camper-leader-board/node_modules
+
+
 
