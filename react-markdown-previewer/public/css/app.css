@@ -1,0 +1,85 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* App Styles */
+* {
+  box-sizing: border-box; }
+
+html, body, #app, #container {
+  height: 100%;
+  overflow: hidden; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'PT Mono', monospace;
+  min-width: 600px;
+  max-width: 1200px; }
+
+header {
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  background-color: #3c0c1a; }
+
+#content {
+  height: 100%;
+  width: 100%;
+  display: table;
+  background-color: #055b6d; }
+
+#content > div {
+  padding: 1.5em; }
+
+#input-area,
+#preview-area {
+  display: table-cell;
+  width: 50%;
+  height: 100%; }
+  #input-area .title,
+  #preview-area .title {
+    font-size: 1.5em; }
+  #input-area *,
+  #preview-area * {
+    margin-bottom: 1em; }
+
+#input-area {
+  color: #ffffff;
+  font-family: 'Ubuntu Mono', monospace; }
+  #input-area textarea {
+    font-size: 1.125em;
+    display: block;
+    color: #ffffff;
+    background-color: transparent;
+    box-sizing: border-box;
+    width: 100%;
+    border: none;
+    padding: 0;
+    outline: none; }
+
+#preview-area {
+  background-color: #ffffff;
+  color: #666666; }
+
+/*# sourceMappingURL=app.css.map */
