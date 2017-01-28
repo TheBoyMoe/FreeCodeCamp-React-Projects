@@ -1,5 +1,7 @@
 .idea/
 npm-debug.log
+boiler-plate-starter
+
 react-markdown-previewer/node_modules
 react-markdown-previewer/.idea/
 react-markdown-previewer/public/bundle.js
