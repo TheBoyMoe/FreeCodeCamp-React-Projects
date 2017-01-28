@@ -1,3 +1,7 @@
 .idea/
 react-markdown-previewer/node_modules
 react-markdown-previewer/.idea/
+react-markdown-previewer/examples
+react-markdown-previewer/public/css/.sass-cache
+npm-debug.log
+
