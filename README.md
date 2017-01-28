@@ -1,15 +1,14 @@
-React Markdown Preview App
---------------------------
+FreeCodeCamp React Apps 
+-----------------------
 
-React Markdown Preview App built using:
+Various React Apps built as part of the course work for [FreeCodeCamp](http://freecodecamp.com) Full Stack JavasScript Developer certificate.
+The following technologies were used:
 - React
 - ES6
 - JSX
 - Babel
-- Webpack    
-- SCSS
-
-One of the React projects submitted as part of the course work for the [FreeCodeCamp](http://freecodecamp.com) Data Visualization Certificate.
+- Webpack 
+- HTML/CSS/SCSS
 
 
 ###MIT License
