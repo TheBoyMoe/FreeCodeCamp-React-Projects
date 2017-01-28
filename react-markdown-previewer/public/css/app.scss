@@ -1,0 +1,120 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+
+
+/* App Styles */
+
+// colors
+$primary-text-color: #ffffff;
+$secondary-text-color: #666666;
+$primary-bkgd-color: #ffffff;
+$secondary-bkgd-color: #055b6d;
+$tertiary-bkgd-color: #3c0c1a;
+
+// spaces
+$size-xxxlarge: 3.750em;	// 60px
+$size-xxlarge: 3.0em;
+$size-xlarge: 2.0em;		// 32px
+$size-large: 1.5em;		// 24px
+$size-medium: 1.250em; 	// 20px
+$size-normal: 1.0em; 		// 16px
+$size-small: 0.5em;		// 8px
+
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #app, #container {
+  	height: 100%;
+  	overflow: hidden; // ?? remove
+}
+
+body {
+	margin: 0;
+	padding: 0;
+  	font-family: 'PT Mono', monospace;
+  	min-width: 600px;
+  	max-width: 1200px;
+}
+
+header {
+	width: 100%;
+	text-align: center;
+	color: $primary-text-color;
+	background-color: $tertiary-bkgd-color;
+}
+
+#content {
+  	height: 100%;
+	width: 100%;
+  	display: table;
+	background-color: $secondary-bkgd-color;
+}
+
+#content > div {
+  	padding: $size-large;
+}
+
+#input-area,
+#preview-area {
+	display: table-cell;
+	width: 50%;
+	height: 100%;
+
+  	.title {
+	  	font-size: $size-large;
+	}
+
+  	* {
+    	margin-bottom: $size-normal;
+	}
+}
+
+#input-area {
+	color: $primary-text-color;
+	font-family: 'Ubuntu Mono', monospace;
+
+	textarea {
+	  	font-size: 1.125em;
+		display: block;
+		color: $primary-text-color;
+		background-color: transparent;
+	  	box-sizing: border-box;
+	  	width: 100%;
+		border: none;
+		padding: 0;
+		outline: none;
+	}
+
+}
+
+#preview-area {
+  	background-color: $primary-bkgd-color;
+	color: $secondary-text-color;
+}
