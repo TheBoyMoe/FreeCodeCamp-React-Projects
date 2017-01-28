@@ -35,7 +35,6 @@ Shopping list:\n\n * apples\n * oranges\n * pears\n\nNumbered list:\n\n\
 let Output = React.createClass({
 	// use the https://github.com/chjj/marked lib to convert markdown into plain html
 	generateMarkdown: function(text) {
-		console.log(`text ${text}`);
 		return {
 			__html: marked(text)
 		}
@@ -43,7 +42,7 @@ let Output = React.createClass({
     render: function () {
         return (
             <div id="preview-area">
-                <h2 className="title">Preview area</h2>
+                <h2 className="title">Formatted Preview Area</h2>
                 <div id="markdown-text" dangerouslySetInnerHTML={this.generateMarkdown(this.props.markdown)}></div>
             </div>
         )
