@@ -7,8 +7,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   margin: 0;
   padding: 0;
   border: 0;
-  //font-size: 100%;
-  //font: inherit;
   vertical-align: baseline; }
 
 /* HTML5 display-role reset for older browsers */
@@ -27,53 +25,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-
-/* Helper classes */
-
-//.pull-left {
-//  float: left !important;
-//}
-//
-//.pull-right {
-//  float: right !important;
-//}
-//
-//.show {
-//  display: block !important;
-//}
-//
-//.hidden {
-//  display: none !important;
-//}
-//
-//.invisible {
-//  visibility: hidden;
-//}
-//
-//.clearfix:before,
-//.clearfix:after {
-//  content: "";
-//  display: table;
-//}
-//
-//.clearfix:after {
-//  clear: both;
-//}
-//
-//.clearfix {
-//  zoom: 1; /* ie 6/7 */
-//}
-//
-//.center-parent {
-//  position: relative;
-//}
-//
-//.center-child {
-//  position: absolute;
-//  top: 50%;
-//  transform: translateY(-50%);
-//}
-//
 
 
 /* App Styles */
@@ -108,7 +59,7 @@ body {
 	margin: 0;
 	padding: 0;
   	font-family: 'PT Mono', monospace;
-  	min-width: 820px;
+  	min-width: 600px;
   	max-width: 1200px;
 }
 
@@ -165,7 +116,5 @@ header {
 
 #preview-area {
   	background-color: $primary-bkgd-color;
-  	height: 100%;
 	color: $secondary-text-color;
 }
-
