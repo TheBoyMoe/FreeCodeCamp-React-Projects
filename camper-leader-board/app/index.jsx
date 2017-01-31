@@ -173,9 +173,9 @@ let Table = React.createClass({
 	},
 	getCamperInfo: function () {
 		// iterate through, populate row, returning array of rows
-		return this.state.data.map(function (camper) {
+		return this.state.data.map(function (camper, i) {
 			return (
-				<TableRow id={camper.lastUpdate} img={camper.img} username={camper.username}
+				<TableRow key={i + 1} id={i + 1} img={camper.img} username={camper.username}
 						  recent={camper.recent} alltime={camper.alltime}/>
 			);
 		})
