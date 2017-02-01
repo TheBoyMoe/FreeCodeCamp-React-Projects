@@ -67,14 +67,24 @@ let PageHeader = React.createClass({
 });
 
 let TableHeader = React.createClass({
+	handleRecent: function (e) {
+		e.preventDefault();
+		alert(`clicked on recent listing`);
+		// TODO pass the request to the parent via function
+	},
+	handleAlltime: function (e) {
+		e.preventDefault();
+		alert(`clicked on all time listing`);
+		// TODO pass the request to the parent via function
+	},
 	render: function () {
 		return (
 			<thead>
 				<tr>
 					<th>#</th>
 					<th>FCC Camper</th>
-					<th>Points earned during the past 30days</th>
-					<th>All time score</th>
+					<th onClick={this.handleRecent}>Points earned during the past 30days</th>
+					<th onClick={this.handleAlltime}>All time score</th>
 				</tr>
 			</thead>
 		)
