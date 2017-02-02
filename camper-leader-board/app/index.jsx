@@ -113,11 +113,13 @@ let TableRow = React.createClass({
 	render: function () {
 		return (
 			<tr>
-				<td>{this.props.id}</td>
-				<td><img className="avatar" src={this.props.img} alt="Camper avatar"/></td>
-				<td>{this.props.username}</td>
-				<td>{this.props.recent}</td>
-				<td>{this.props.alltime}</td>
+				<a href={'http://freecodecamp.com/' + this.props.username} target="_blank">
+					<td>{this.props.id}</td>
+					<td><img className="avatar" src={this.props.img} alt="Camper avatar"/></td>
+					<td>{this.props.username}</td>
+					<td>{this.props.recent}</td>
+					<td>{this.props.alltime}</td>
+				</a>
 			</tr>
 		)
 	}
