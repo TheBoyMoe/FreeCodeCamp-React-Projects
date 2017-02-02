@@ -9,4 +9,8 @@ body {
   min-width: 600px;
   max-width: 1200px; }
 
+table td img {
+  width: 80px;
+  height: 80px; }
+
 /*# sourceMappingURL=app.css.map */
