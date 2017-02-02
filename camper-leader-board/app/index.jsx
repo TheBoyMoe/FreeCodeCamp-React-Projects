@@ -142,12 +142,24 @@ let Table = React.createClass({
 		});
 	},
 	componentDidMount: function () {
-		// down any updates post rendering of component
+		// no op
+	},
+	updateComponentState: function(url) {
+		// update component state post when ever a user has clicked
+		// on either recent/allTime column headings
+		let that = this;
+		this.fetchCamperInfo(url).then(function (data) {
+			that.setState({
+				data: data
+			})
+		}, function (errorMessage) {
+			alert(errorMessage);
+		})
 	},
 	render: function () {
 		return (
 			<table>
-				<TableHeader onSort={this.fetchCamperInfo}/>
+				<TableHeader onSort={this.updateComponentState}/>
 				<tbody>{this.setCamperInfo()}</tbody>
 			</table>
 		)
