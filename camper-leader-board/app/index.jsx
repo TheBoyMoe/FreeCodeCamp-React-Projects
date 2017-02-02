@@ -58,14 +58,14 @@
 const ALLTIME_URL = 'https://fcctop100.herokuapp.com/api/fccusers/top/alltime';
 const RECENT_URL = 'https://fcctop100.herokuapp.com/api/fccusers/top/recent';
 
-function fetchCamperInfo(url) {
-	// make the api call using axios and a js promise
-	return axios.get(url).then(function (response) {
-		if(response) return response; // array of camper json objects
-	}, function (error) {
-		throw new Error('Error connecting to server');
-	});
-}
+// function fetchCamperInfo(url) {
+// 	// make the api call using axios and a js promise
+// 	return axios.get(url).then(function (response) {
+// 		if(response) return response.data; // array of camper json objects
+// 	}, function (error) {
+// 		throw new Error('Error connecting to server');
+// 	});
+// }
 
 let PageHeader = React.createClass({
 	render: function () {
@@ -79,12 +79,12 @@ let TableHeader = React.createClass({
 	handleRecent: function (e) {
 		e.preventDefault();
 		// pass the request to the parent via function
-		this.props.onSort(RECENT_URL);
+		this.props.onFetch(RECENT_URL);
 	},
 	handleAlltime: function (e) {
 		e.preventDefault();
 		// pass the request to the parent via function
-		this.props.onSort(ALLTIME_URL);
+		this.props.onFetch(ALLTIME_URL);
 	},
 	render: function () {
 		return (
@@ -102,15 +102,19 @@ let TableHeader = React.createClass({
 
 
 let TableRow = React.createClass({
-	fetchCamperAvatar: function () {
-		let avatarUrl = this.props.img;
-		
-	},
+	// fetchCamperAvatar: function () {
+	// 	let avatarUrl = this.props.img;
+	// 	fetchCamperInfo(avatarUrl).then(function (data) {
+	// 		return data;
+	// 	}, function (errorMessage) {
+	// 		alert(errorMessage);
+	// 	});
+	// },
 	render: function () {
 		return (
 			<tr>
 				<td>{this.props.id}</td>
-				<td>{this.fetchCamperAvatar()}</td>
+				<td><img className="avatar" src={this.props.img} alt="Camper avatar"/></td>
 				<td>{this.props.username}</td>
 				<td>{this.props.recent}</td>
 				<td>{this.props.alltime}</td>
@@ -135,20 +139,20 @@ let Table = React.createClass({
 			);
 		})
 	},
-	// fetchCamperInfo: function (url) {
-	// 	// make the api call using axios and a js promise
-	// 	return axios.get(url).then(function (response) {
-	// 		if(response) return response.data; // array of camper json objects
-	// 	}, function (error) {
-	// 		throw new Error('Error connecting to server');
-	// 	});
-	// },
+	fetchCamperInfo: function (url) {
+		// make the api call using axios and a js promise
+		return axios.get(url).then(function (response) {
+			if(response) return response.data; // array of camper json objects
+		}, function (error) {
+			throw new Error('Error connecting to server');
+		});
+	},
 	componentWillMount: function () {
 		let that = this;
 		// fetch the initial data from server prior to mounting the component
-		fetchCamperInfo(RECENT_URL).then(function (response) {
+		this.fetchCamperInfo(RECENT_URL).then(function (data) {
 			that.setState({
-				data: response.data
+				data: data
 			})
 		}, function (errorMessage) {
 			alert(errorMessage);
@@ -161,9 +165,9 @@ let Table = React.createClass({
 		// update component state post when ever a user has clicked
 		// on either recent/allTime column headings
 		let that = this;
-		fetchCamperInfo(url).then(function (response) {
+		this.fetchCamperInfo(url).then(function (data) {
 			that.setState({
-				data: response.data
+				data: data
 			})
 		}, function (errorMessage) {
 			alert(errorMessage);
@@ -172,7 +176,7 @@ let Table = React.createClass({
 	render: function () {
 		return (
 			<table>
-				<TableHeader onSort={this.updateComponentState}/>
+				<TableHeader onFetch={this.updateComponentState}/>
 				<tbody>{this.setCamperInfo()}</tbody>
 			</table>
 		)
