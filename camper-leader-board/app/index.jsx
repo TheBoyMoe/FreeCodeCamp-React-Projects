@@ -69,13 +69,13 @@ let PageHeader = React.createClass({
 let TableHeader = React.createClass({
 	handleRecent: function (e) {
 		e.preventDefault();
-		alert(`clicked on recent listing`);
-		// TODO pass the request to the parent via function
+		// pass the request to the parent via function
+		this.props.onSort(RECENT_URL);
 	},
 	handleAlltime: function (e) {
 		e.preventDefault();
-		alert(`clicked on all time listing`);
-		// TODO pass the request to the parent via function
+		// pass the request to the parent via function
+		this.props.onSort(ALLTIME_URL);
 	},
 	render: function () {
 		return (
@@ -128,13 +128,12 @@ let Table = React.createClass({
 			if(response) return response.data; // array of camper json objects
 		}, function (error) {
 			throw new Error('Error connecting to server');
-		}); 
-		
+		});
 	},
 	componentWillMount: function () {
 		let that = this;
-		// fetch data from server prior to mounting the component
-		this.fetchCamperInfo(ALLTIME_URL).then(function (data) {
+		// fetch the initial data from server prior to mounting the component
+		this.fetchCamperInfo(RECENT_URL).then(function (data) {
 			that.setState({
 				data: data
 			})
@@ -148,7 +147,7 @@ let Table = React.createClass({
 	render: function () {
 		return (
 			<table>
-				<TableHeader/>
+				<TableHeader onSort={this.fetchCamperInfo}/>
 				<tbody>{this.setCamperInfo()}</tbody>
 			</table>
 		)
