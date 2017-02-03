@@ -9,6 +9,13 @@ body {
   min-width: 600px;
   max-width: 1200px; }
 
+#container {
+  max-width: 940px;
+  padding: 0 5%;
+  margin: 0 auto; }
+  #container h1 {
+    margin: 0; }
+
 table td img {
   width: 80px;
   height: 80px; }
