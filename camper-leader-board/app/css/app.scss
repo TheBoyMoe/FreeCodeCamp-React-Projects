@@ -20,7 +20,8 @@ $size-small: 0.5em;		// 8px
 body {
 	margin: 0 auto;
 	padding: 0;
-	font-family: 'PT Mono', monospace;
+	font-family: 'Open Sans', sans-serif;
+	color: #666;
 	min-width: 600px;
 	max-width: 1200px;
 }
@@ -50,3 +51,4 @@ table {
 	}
 
 }
+
