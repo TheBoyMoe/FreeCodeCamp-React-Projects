@@ -58,15 +58,6 @@
 const ALLTIME_URL = 'https://fcctop100.herokuapp.com/api/fccusers/top/alltime';
 const RECENT_URL = 'https://fcctop100.herokuapp.com/api/fccusers/top/recent';
 
-// function fetchCamperInfo(url) {
-// 	// make the api call using axios and a js promise
-// 	return axios.get(url).then(function (response) {
-// 		if(response) return response.data; // array of camper json objects
-// 	}, function (error) {
-// 		throw new Error('Error connecting to server');
-// 	});
-// }
-
 let PageHeader = React.createClass({
 	render: function () {
 		return (
@@ -102,14 +93,6 @@ let TableHeader = React.createClass({
 
 
 let TableRow = React.createClass({
-	// fetchCamperAvatar: function () {
-	// 	let avatarUrl = this.props.img;
-	// 	fetchCamperInfo(avatarUrl).then(function (data) {
-	// 		return data;
-	// 	}, function (errorMessage) {
-	// 		alert(errorMessage);
-	// 	});
-	// },
 	render: function () {
 		return (
 			<tr>
@@ -159,9 +142,6 @@ let Table = React.createClass({
 		}, function (errorMessage) {
 			alert(errorMessage);
 		});
-	},
-	componentDidMount: function () {
-		// no op
 	},
 	updateComponentState: function(url) {
 		// update component state post when ever a user has clicked
