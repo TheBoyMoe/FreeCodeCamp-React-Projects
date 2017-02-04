@@ -95,8 +95,7 @@ let TableHeader = React.createClass({
 let TableRow = React.createClass({
 	handleClick: function (e) {
 		e.preventDefault();
-		alert(`clicked on row ${this.props.id}`);
-		/*<a href={'http://freecodecamp.com/' + this.props.username} target="_blank">*/
+		window.open('http://freecodecamp.com/' + this.props.username, '_blank');
 	},
 	render: function () {
 		return (
