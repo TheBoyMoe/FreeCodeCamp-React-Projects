@@ -4,15 +4,15 @@
 	// app examples:
 	[1] https://codepen.io/freeCodeCamp/full/eZGMjp (project example)
 	[2] https://codepen.io/Jarvis1010/pen/oYxzOK (responsive table using bootstrap)
-	[3] https://codepen.io/maci01/pen/YGNAGk *(UI - responsive using media queries - NO bootstrap, sort works)
+	*[3] https://codepen.io/maci01/pen/YGNAGk *(UI - responsive using media queries - NO bootstrap, sort works)
 	[4] https://codepen.io/Bouncey/pen/OXkgOO (uses table layout & jQuery)
 	[5] https://codepen.io/jbluks/pen/bBoovv
 	[6] https://codepen.io/micakce/pen/pRPQdx?editors=1010 (uses axios and promises??)**
 	[7] https://codepen.io/AlexOleynyk/pen/gLLyNq
 	[8] https://codepen.io/sufflavus/pen/RazqBE?editors=1010 (check code)
 	[9] https://codepen.io/eddyw/pen/qNZXga (Responsive ui using bootstrap - sort works)
-	[10] https://codepen.io/thomlom/pen/zBGOYd * (top draw ui - responsive - bootstrap)
-	[11] https://codepen.io/freeCodeCamp/pen/eZGMjp/?editors=1010 (responsive ui - bootstrap)
+	*[10] https://codepen.io/thomlom/pen/zBGOYd * (top draw ui - responsive - bootstrap)
+	*[11] https://codepen.io/freeCodeCamp/pen/eZGMjp/?editors=1010 (responsive ui - bootstrap)
 	
 	// docs:
 	[12] https://facebook.github.io/react/docs/thinking-in-react.html (build a searchable table using react)
@@ -83,7 +83,7 @@ let TableHeader = React.createClass({
 				<tr>
 					<th>#</th>
 					<th>FCC Camper</th>
-					<th onClick={this.handleRecent}>Points earned during the past 30days</th>
+					<th onClick={this.handleRecent}>Points earned in past 30days</th>
 					<th onClick={this.handleAlltime}>All time score</th>
 				</tr>
 			</thead>
@@ -93,16 +93,18 @@ let TableHeader = React.createClass({
 
 
 let TableRow = React.createClass({
+	handleClick: function (e) {
+		e.preventDefault();
+		alert(`clicked on row ${this.props.id}`);
+		/*<a href={'http://freecodecamp.com/' + this.props.username} target="_blank">*/
+	},
 	render: function () {
 		return (
-			<tr>
-				<a href={'http://freecodecamp.com/' + this.props.username} target="_blank">
-					<td>{this.props.id}</td>
-					<td><img className="avatar" src={this.props.img} alt="Camper avatar"/></td>
-					<td>{this.props.username}</td>
-					<td>{this.props.recent}</td>
-					<td>{this.props.alltime}</td>
-				</a>
+			<tr onClick={this.handleClick}>
+				<td>{this.props.id}</td>
+				<td><img className="avatar" src={this.props.img} alt="Camper avatar"/>{this.props.username}</td>
+				<td>{this.props.recent}</td>
+				<td>{this.props.alltime}</td>
 			</tr>
 		)
 	}

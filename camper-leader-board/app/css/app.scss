@@ -42,8 +42,8 @@ table {
   	td {
 
 		img {
-			width: 80px;
-			height: 80px;
+			width: 60px;
+			height: 60px;
 			border-radius: 100%;
 			display: inline-block;
 		}
@@ -52,3 +52,10 @@ table {
 
 }
 
+@media screen and (min-width: 480px) {
+
+}
+
+@media screen and (min-width: 660px) {
+
+}
