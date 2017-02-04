@@ -100,7 +100,7 @@ let TableRow = React.createClass({
 	},
 	render: function () {
 		return (
-			<tr onClick={this.handleClick}>
+			<tr className="camper-info" onClick={this.handleClick}>
 				<td className="index">{this.props.id}</td>
 				<td className="avatar">
 					<img src={this.props.img} alt="Camper avatar"/>
