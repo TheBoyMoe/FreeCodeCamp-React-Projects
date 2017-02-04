@@ -81,10 +81,11 @@ let TableHeader = React.createClass({
 		return (
 			<thead>
 				<tr>
-					<th>#</th>
-					<th>FCC Camper</th>
-					<th onClick={this.handleRecent}>Points earned in past 30days</th>
-					<th onClick={this.handleAlltime}>All time score</th>
+					<th id="index-title">#</th>
+					<th>{}</th>
+					<th id="camper-title">FCC Camper</th>
+					<th id="recent-score-title" onClick={this.handleRecent}>Points earned in past 30days</th>
+					<th id="all-time-score-title" onClick={this.handleAlltime}>All time score</th>
 				</tr>
 			</thead>
 		)
@@ -100,10 +101,13 @@ let TableRow = React.createClass({
 	render: function () {
 		return (
 			<tr onClick={this.handleClick}>
-				<td>{this.props.id}</td>
-				<td><img className="avatar" src={this.props.img} alt="Camper avatar"/>{this.props.username}</td>
-				<td>{this.props.recent}</td>
-				<td>{this.props.alltime}</td>
+				<td className="index">{this.props.id}</td>
+				<td className="avatar">
+					<img src={this.props.img} alt="Camper avatar"/>
+				</td>
+				<td className="camper">{this.props.username}</td>
+				<td className="recent-score">{this.props.recent}</td>
+				<td className="all-time-score">{this.props.alltime}</td>
 			</tr>
 		)
 	}

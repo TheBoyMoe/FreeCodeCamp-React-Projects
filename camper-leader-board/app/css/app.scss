@@ -12,6 +12,8 @@ $size-medium: 1.250em; 	// 20px
 $size-normal: 1.0em; 		// 16px
 $size-small: 0.5em;		// 8px
 
+$size-row: 5.750em;
+
 * {
 	box-sizing: border-box;
 }
@@ -22,7 +24,7 @@ body {
 	padding: 0;
 	font-family: 'Open Sans', sans-serif;
 	color: #666;
-	min-width: 600px;
+	//min-width: 600px;
 	max-width: 1200px;
 }
 
@@ -38,17 +40,33 @@ body {
 
 table {
 
-	tr {
-	  	cursor: pointer;
+	thead #camper-title {
+	  text-align: left;
 	}
 
-  	td {
+  	thead #index-title,
+  	thead #recent-score-title,
+	thead #all-time-score-title,
+	tbody .index,
+	tbody .recent-score,
+	tbody .all-time-score {
+	  	text-align: center;
+	}
+
+	tr {
+		cursor: pointer;
+		outline: 1px solid red;
+	}
+
+	td {
 
 		img {
-			width: 60px;
-			height: 60px;
+			width: $size-xxxlarge;
+			height: $size-xxxlarge;
 			border-radius: 100%;
 			display: inline-block;
+			margin: $size-small $size-large $size-small $size-small;
+			vertical-align: middle;
 		}
 
 	}
