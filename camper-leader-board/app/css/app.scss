@@ -29,12 +29,11 @@ body {
 }
 
 #container {
-  	//max-width: 940px;
   	padding: 0 5%;
   	margin: 0 auto;
 
   	h1.page-title {
-	  	margin: $size-large 0;
+	  	margin: $size-medium 0;
 	  	text-align: center;
 	  	color: #055b6d;
 	}
@@ -76,6 +75,10 @@ table {
 
   	tbody tr:nth-child(odd) {
 	  	background-color: rgba(234,234,234,0.3);
+	}
+
+	tbody tr:hover {
+	  	background-color: rgba(234,234,234,0.6);
 	}
 
 	tr #recent-score-title,

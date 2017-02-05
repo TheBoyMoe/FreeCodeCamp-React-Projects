@@ -14,7 +14,7 @@ body {
   padding: 0 5%;
   margin: 0 auto; }
   #container h1.page-title {
-    margin: 1.5em 0;
+    margin: 1.25em 0;
     text-align: center;
     color: #055b6d; }
 
@@ -40,6 +40,8 @@ table {
     border-bottom: 1px solid #efefef; }
   table tbody tr:nth-child(odd) {
     background-color: rgba(234, 234, 234, 0.3); }
+  table tbody tr:hover {
+    background-color: rgba(234, 234, 234, 0.6); }
   table tr #recent-score-title,
   table tr #all-time-score-title,
   table tr.camper-info {
