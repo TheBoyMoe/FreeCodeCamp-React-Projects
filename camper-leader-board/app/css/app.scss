@@ -24,17 +24,19 @@ body {
 	padding: 0;
 	font-family: 'Open Sans', sans-serif;
 	color: #666;
+  	min-width: 480px;
 	max-width: 960px;
 }
 
 #container {
-  	max-width: 940px;
+  	//max-width: 940px;
   	padding: 0 5%;
   	margin: 0 auto;
 
   	h1.page-title {
 	  	margin: $size-large 0;
 	  	text-align: center;
+	  	color: #055b6d;
 	}
 }
 
