@@ -32,15 +32,28 @@ body {
   	padding: 0 5%;
   	margin: 0 auto;
 
-  	h1 {
-	  	margin: 0;
+  	h1.page-title {
+	  	margin: $size-large 0;
 	  	text-align: center;
 	}
 }
 
+
+
 table {
 
   	width: 100%;
+  	border-collapse: collapse;
+
+  	thead {
+		padding: $size-normal;
+	   	background-color: #055b6d;
+	  	color: #ffffff;
+
+	  	th {
+		  	padding: $size-normal;
+		}
+	}
 
 	thead #camper-title {
 	  text-align: left;
@@ -55,6 +68,13 @@ table {
 	  	text-align: center;
 	}
 
+  	tbody tr {
+	  	border-bottom: 1px solid #efefef;
+	}
+
+  	tbody tr:nth-child(odd) {
+	  	background-color: rgba(234,234,234,0.3);
+	}
 
 	tr #recent-score-title,
 	tr #all-time-score-title,
@@ -62,18 +82,36 @@ table {
 	  	cursor: pointer;
 	}
 
-	td {
+  	tr {
 
-		img {
-			width: $size-xxxlarge;
-			height: $size-xxxlarge;
-			border-radius: 100%;
-			display: inline-block;
-			margin: $size-small $size-large $size-small $size-small;
-			vertical-align: middle;
+	  	padding: $size-small;
+
+		td {
+
+
+			img {
+				width: $size-xxxlarge;
+				height: $size-xxxlarge;
+				border-radius: 100%;
+				display: block;
+				margin: $size-small auto;
+				vertical-align: middle;
+			}
+
+		}
+
+	  	td.avatar {
+		  display: block;
+		}
+
+		td.camper {
+		  	padding-left: $size-normal;
 		}
 
 	}
+
+
+
 
 }
 

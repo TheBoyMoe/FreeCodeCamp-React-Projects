@@ -61,7 +61,7 @@ const RECENT_URL = 'https://fcctop100.herokuapp.com/api/fccusers/top/recent';
 let PageHeader = React.createClass({
 	render: function () {
 		return (
-			<h1><i className="fa fa-free-code-camp"/>FCC Camper Leader Board</h1>
+			<h1 className="page-title"><i className="fa fa-free-code-camp"/> FCC Camper Leader Board</h1>
 		)
 	}
 });
