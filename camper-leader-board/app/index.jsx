@@ -2,7 +2,7 @@
 	References:
 	
 	// app examples:
-	[1] https://codepen.io/freeCodeCamp/full/eZGMjp (project example)
+	[1] https://codepen.io/freeCodeCamp/full/eZGMjp (project example - idea for add/remove class using js onClick)
 	[2] https://codepen.io/Jarvis1010/pen/oYxzOK (responsive table using bootstrap)
 	*[3] https://codepen.io/maci01/pen/YGNAGk *(UI - responsive using media queries - NO bootstrap, sort works)
 	[4] https://codepen.io/Bouncey/pen/OXkgOO (uses table layout & jQuery)
