@@ -16,19 +16,21 @@ body {
   #container h1.page-title {
     margin: 1.25em 0;
     text-align: center;
-    color: #055b6d; }
+    color: rgba(5, 91, 109, 0.9); }
 
 table {
   width: 100%;
   border-collapse: collapse; }
   table thead {
     padding: 1em;
-    background-color: #055b6d;
+    background-color: rgba(5, 91, 109, 0.9);
     color: #ffffff; }
     table thead th {
       padding: 1em; }
   table thead #camper-title {
     text-align: left; }
+  table thead .active {
+    background-color: #055b6d; }
   table thead #index-title,
   table thead #recent-score-title,
   table thead #all-time-score-title,

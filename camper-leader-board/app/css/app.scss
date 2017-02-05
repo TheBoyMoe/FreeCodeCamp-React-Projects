@@ -35,7 +35,7 @@ body {
   	h1.page-title {
 	  	margin: $size-medium 0;
 	  	text-align: center;
-	  	color: #055b6d;
+	  	color: rgba(5,91,109,0.9);
 	}
 }
 
@@ -48,7 +48,7 @@ table {
 
   	thead {
 		padding: $size-normal;
-	   	background-color: #055b6d;
+	  	background-color: rgba(5,91,109,0.9);
 	  	color: #ffffff;
 
 	  	th {
@@ -58,6 +58,10 @@ table {
 
 	thead #camper-title {
 	  text-align: left;
+	}
+
+  	thead .active {
+	  	background-color: rgba(5,91,109,1.0);
 	}
 
   	thead #index-title,
@@ -114,9 +118,6 @@ table {
 		}
 
 	}
-
-
-
 
 }
 

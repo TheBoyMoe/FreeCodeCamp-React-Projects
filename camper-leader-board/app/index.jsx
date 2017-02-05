@@ -19,6 +19,7 @@
 			github repo: http://codepen.io/lacker/pen/vXpAgj?editors=0010
 	[13] http://jsfiddle.net/jhudson8/dahdx6eu/ (example of simple react table)
 	[14] http://blog.matthewcheok.com/building-generic-components-in-react/ (simple react table)
+	[15] https://codepen.io/anon/pen/mepogj?editors=001 (set class on active react components onClick)
 	
 	// data:
  	https://fcctop100.herokuapp.com/api/fccusers/top/recent
@@ -69,13 +70,26 @@ let PageHeader = React.createClass({
 let TableHeader = React.createClass({
 	handleRecent: function (e) {
 		e.preventDefault();
-		// pass the request to the parent via function
 		this.props.onFetch(RECENT_URL);
+		this.addActiveClassList(e);
 	},
 	handleAlltime: function (e) {
 		e.preventDefault();
-		// pass the request to the parent via function
 		this.props.onFetch(ALLTIME_URL);
+		this.addActiveClassList(e);
+	},
+	addActiveClassList: function (e) {
+		if(!e.target.classList.contains('active')) {
+			this.removeActiveClassName();
+			e.target.classList.add('active');
+		}
+	},
+	removeActiveClassName: function () {
+		let elms = document.getElementsByClassName('score');
+		for(let i = 0; i < elms.length; i++) {
+			if(elms.item(i).classList.contains('active'))
+				elms.item(i).classList.remove('active');
+		}
 	},
 	render: function () {
 		return (
@@ -84,8 +98,8 @@ let TableHeader = React.createClass({
 					<th id="index-title">#</th>
 					<th>{}</th>
 					<th id="camper-title">FCC Camper</th>
-					<th id="recent-score-title" onClick={this.handleRecent}>Points earned in past 30days</th>
-					<th id="all-time-score-title" onClick={this.handleAlltime}>All time score</th>
+					<th id="recent-score-title" className="score active" onClick={this.handleRecent}>Points earned in past 30days</th>
+					<th id="all-time-score-title" className="score" onClick={this.handleAlltime}>All time score</th>
 				</tr>
 			</thead>
 		)
