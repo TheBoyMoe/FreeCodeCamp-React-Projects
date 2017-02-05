@@ -12,7 +12,7 @@ The following technologies were used:
 
 Working versions of the following projects can be seen at Codepen.io:  
  * [Markdown Previewer](http://codepen.io/billfero/full/rjYdQJ/)
-
+ * [FreeCodeCamp User Leader Board](http://http://codepen.io/billfero/full/jyKKvL/)
 
 ###MIT License
 
